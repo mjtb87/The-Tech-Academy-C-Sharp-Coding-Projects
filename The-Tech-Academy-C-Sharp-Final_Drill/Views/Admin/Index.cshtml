@@ -1,0 +1,32 @@
+﻿@using car_insurance_drill.ViewModels
+@model List<AdminVm>
+
+<div class="row no-gutters" m-3>
+    <div class="card col-sm-12 col-md-10 col-lg-6 mx-auto shadow">
+        <div class="card-header text-center">
+            <h5 class="m-0">Admin Page</h5>
+        </div>
+        <div class="card-body">
+            @foreach (var customer in Model)
+            {
+                <input type="hidden" name="Id" value="@customer.Id" />
+                <div class="row mb-3">
+                    <div class="col-2">
+                        <h5>Customer's First Name: @customer.FirstName</h5> 
+                    </div>
+                    <div class="col">
+                        <h5>Customer's Last Name: @customer.LastName</h5> 
+                    </div>
+                    <div class="col-4">
+                        <h5>Customer's Email Address: @customer.EmailAddress"</h5> 
+                    </div>
+                    <div class="col-4">
+                        <h5>Customer's Quote: @customer.Quote</h5> 
+                        <br>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+</div>
+
